@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { DarkModeProvider } from "./context/DarkModeContext";
+import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
 
 let isDarkMode = localStorage.getItem("isDarkMode");
 if (isDarkMode && isDarkMode === "true") {
@@ -19,6 +21,8 @@ function App() {
           <Route element={<AppLayout />}>
             <Route index element={<Navigate replace to="home" />} />
             <Route path="home" element={<Home />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="skills" element={<Skills />} />
             <Route path="contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Route>

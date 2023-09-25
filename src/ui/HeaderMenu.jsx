@@ -4,10 +4,10 @@ import { useDarkMode } from "../context/DarkModeContext";
 function HeaderMenu() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
   return (
-    <ul>
+    <ul className="my-auto">
       <li>
         <button onClick={toggleDarkMode}>
-          {isDarkMode ? <HiOutlineMoon /> : <HiOutlineSun />}
+          {isDarkMode ? <HiOutlineSun /> : <HiOutlineMoon />}
         </button>
       </li>
     </ul>

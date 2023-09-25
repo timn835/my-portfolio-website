@@ -1,5 +1,9 @@
 function Main({ children }) {
-  return <main>{children}</main>;
+  return (
+    <main className="overflow-y-auto px-3 sm:px-5 md:px-8 lg:px-10">
+      {children}
+    </main>
+  );
 }
 
 export default Main;
