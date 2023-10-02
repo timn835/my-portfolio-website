@@ -1,6 +1,6 @@
 import { useDarkMode } from "../context/DarkModeContext";
-import HeaderLinks from "./HeaderLinks";
-import HeaderMenu from "./HeaderMenu";
+import HeaderDropdowns from "./HeaderDropdowns";
+import HeaderMenu from "./HeaderOptions";
 import Logo from "./Logo";
 
 function Header() {
@@ -8,10 +8,10 @@ function Header() {
   const bgColor = isDarkMode ? "bg-sky-900" : "bg-zinc-300";
   return (
     <header
-      className={`flex h-28 justify-between ${bgColor} px-2 py-4 sm:px-4 md:px-6 lg:px-8`}
+      className={`relative flex h-32 justify-between ${bgColor} px-2 py-4 sm:px-4 md:px-6 lg:px-8`}
     >
       <Logo />
-      <HeaderLinks />
+      <HeaderDropdowns />
       <HeaderMenu />
     </header>
   );
