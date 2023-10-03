@@ -31,7 +31,6 @@
     visibility: visible;
     transform: translateY(0);
     transition: 500ms ease;
-    background-color: red;
   }
 
   .dropdown-menu.inactive {
@@ -39,5 +38,11 @@
     visibility: hidden;
     transform: translateY(-20px);
     transition: 500ms ease;
+  }
+
+  .information-grid {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 2rem;
   }
 }

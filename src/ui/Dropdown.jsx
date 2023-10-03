@@ -1,7 +1,11 @@
 import { useEffect, useRef } from "react";
+import { useDarkMode } from "../context/DarkModeContext";
 
-function Dropdown({ id, dropdownHeader, dropdownContent, openId, setOpenId }) {
-  let menuRef = useRef();
+function Dropdown({ id, openId, setOpenId, children }) {
+  const menuRef = useRef();
+  const { isDarkMode } = useDarkMode();
+  const bgColor = isDarkMode ? "bg-sky-950" : "bg-zinc-50";
+
   useEffect(() => {
     let handler = (e) => {
       if (menuRef.current.contains(e.target)) {
@@ -26,25 +30,23 @@ function Dropdown({ id, dropdownHeader, dropdownContent, openId, setOpenId }) {
           setOpenId((openId) => (openId === id ? null : id));
         }}
       >
-        {dropdownHeader}
+        {id}
       </button>
 
-      <div className={`dropdown-menu ${openId === id ? "active" : "inactive"}`}>
-        <ul>
-          {dropdownContent.map((content, idx) => (
-            <DropdownItem key={idx} text={content} />
-          ))}
-        </ul>
+      <div
+        className={`dropdown-menu absolute ${
+          openId === id ? "active" : "inactive"
+        } ${bgColor}`}
+      >
+        {children}
+        {/* Active */}
+        {/* <div className="bg-red absolute translate-y-0 opacity-100"></div> */}
+
+        {/* Inactive */}
+        {/* <div className="bg-red invisible absolute translate-y-6 opacity-0 transition delay-500 ease-in-out">
+        {children} */}
       </div>
     </div>
-  );
-}
-
-function DropdownItem({ text }) {
-  return (
-    <li className="dropdownItem">
-      <a> {text} </a>
-    </li>
   );
 }
 

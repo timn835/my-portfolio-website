@@ -1,12 +1,12 @@
 import LoremIpsum from "../ui/LoremIpsum";
 
-function Skills() {
+function Services() {
   return (
     <div>
-      <h1>Skills page</h1>
+      <h1>Services page</h1>
       <LoremIpsum numOfParagraphs={10} />
     </div>
   );
 }
 
-export default Skills;
+export default Services;

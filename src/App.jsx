@@ -4,9 +4,9 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { DarkModeProvider } from "./context/DarkModeContext";
-import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Interests from "./pages/Interests";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route element={<AppLayout />}>
             <Route index element={<Navigate replace to="home" />} />
             <Route path="home" element={<Home />} />
-            <Route path="skills" element={<Skills />} />
+            <Route path="services" element={<Services />} />
             <Route path="projects" element={<Projects />} />
             <Route path="contact" element={<Contact />} />
             <Route path="interests" element={<Interests />} />
