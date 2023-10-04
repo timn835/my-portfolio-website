@@ -34,17 +34,11 @@ function Dropdown({ id, openId, setOpenId, children }) {
       </button>
 
       <div
-        className={`dropdown-menu absolute ${
+        className={`dropdown-menu absolute rounded-lg p-2 ${
           openId === id ? "active" : "inactive"
         } ${bgColor}`}
       >
         {children}
-        {/* Active */}
-        {/* <div className="bg-red absolute translate-y-0 opacity-100"></div> */}
-
-        {/* Inactive */}
-        {/* <div className="bg-red invisible absolute translate-y-6 opacity-0 transition delay-500 ease-in-out">
-        {children} */}
       </div>
     </div>
   );

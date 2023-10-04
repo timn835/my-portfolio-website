@@ -15,14 +15,14 @@ function HeaderDropdowns() {
   const [openId, setOpenId] = useState(null);
 
   return (
-    <div className="flex">
+    <div className="my-auto flex">
       <Dropdown id={"Services"} openId={openId} setOpenId={setOpenId}>
         <ServicesMenu />
       </Dropdown>
       <Dropdown id={"Projects"} openId={openId} setOpenId={setOpenId}>
         <ProjectsMenu />
       </Dropdown>
-      <Dropdown id={"Contacts"} openId={openId} setOpenId={setOpenId}>
+      <Dropdown id={"Contact"} openId={openId} setOpenId={setOpenId}>
         <Link to="contact">Contact</Link>
       </Dropdown>
     </div>

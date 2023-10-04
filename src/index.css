@@ -16,6 +16,7 @@
     transition:
       color 0.3s,
       background-color 0.3s;
+    font-size: 1.2rem;
   }
 
   .light-mode {
@@ -29,7 +30,7 @@
   .dropdown-menu.active {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateY(6px);
     transition: 500ms ease;
   }
 

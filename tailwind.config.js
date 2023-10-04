@@ -2,6 +2,9 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      sans: "League Spartan",
+    },
     extend: {
       height: {
         screen: "100dvh",
