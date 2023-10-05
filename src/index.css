@@ -41,9 +41,14 @@
     transition: 500ms ease;
   }
 
-  .information-grid {
+  .services-info-grid {
     display: grid;
     grid-template-columns: repeat(2, max-content);
+    gap: 2rem;
+  }
+  .projects-info-grid {
+    display: grid;
+    grid-template-columns: repeat(1, max-content);
     gap: 2rem;
   }
 }
