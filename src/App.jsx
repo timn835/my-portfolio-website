@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
 import Home from "./pages/Home";
-import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { DarkModeProvider } from "./context/DarkModeContext";
-import Projects from "./pages/Projects";
 import Interests from "./pages/Interests";
-import Services from "./pages/Services";
+import Services from "./features/services/Services";
+import Projects from "./features/projects/Projects";
+import Contact from "./features/contact/Contact";
 
 function App() {
   return (

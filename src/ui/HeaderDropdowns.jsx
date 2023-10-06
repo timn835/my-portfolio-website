@@ -1,15 +1,8 @@
 import { useState } from "react";
 import Dropdown from "./Dropdown";
-import ServicesMenu from "./ServicesMenu";
-import ProjectsMenu from "./ProjectsMenu";
-import { Link } from "react-router-dom";
-
-const navData = {
-  Services: ["ServicesMenu"],
-  Projects: ["project1", "project2", "project3", "project4"],
-  Contact: ["contact1", "contact2", "contact3", "contact4"],
-  About: ["Just a link to the About page"],
-};
+import ServicesMenu from "../features/services/ServicesMenu";
+import ProjectsMenu from "../features/projects/ProjectsMenu";
+import HeaderContactForm from "../features/contact/HeaderContactForm";
 
 function HeaderDropdowns() {
   const [openId, setOpenId] = useState(null);
@@ -23,7 +16,7 @@ function HeaderDropdowns() {
         <ProjectsMenu />
       </Dropdown>
       <Dropdown id={"Contact"} openId={openId} setOpenId={setOpenId}>
-        <Link to="contact">Contact</Link>
+        <HeaderContactForm />
       </Dropdown>
     </div>
   );

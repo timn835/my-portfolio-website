@@ -1,4 +1,4 @@
-import LoremIpsum from "../ui/LoremIpsum";
+import LoremIpsum from "../../ui/LoremIpsum";
 
 function Projects() {
   return (
