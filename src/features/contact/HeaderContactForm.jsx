@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useDarkMode } from "../../context/DarkModeContext";
 import { useState } from "react";
 
-function HeaderContactForm() {
+function HeaderContactForm({ close }) {
   const { isDarkMode } = useDarkMode();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

@@ -51,4 +51,10 @@
     grid-template-columns: repeat(1, max-content);
     gap: 2rem;
   }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(2, 1fr); /* Two rows */
+    gap: 10px; /* Adjust the gap between items as needed */
+  }
 }

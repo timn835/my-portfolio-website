@@ -1,4 +1,4 @@
-function ProjectsMenu() {
+function ProjectsMenu({ close }) {
   return (
     <div className="projects-info-grid">
       <div>
