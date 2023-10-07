@@ -1,34 +1,40 @@
+import MenuListItem from "../../ui/MenuListItem";
+import MenuSection from "../../ui/MenuSection";
+import projectsData from "./projectsData";
+
 function ProjectsMenu({ close }) {
   return (
     <div className="projects-info-grid">
-      <div>
-        <h1 className="pb-1 text-2xl font-bold">Featured</h1>
-        <ul>
-          <li className="flex py-2">
-            <img className="mr-1 h-7" src="kiwisave_icon.png" />
-            <p className="text-lg">KIWI Savings</p>
-          </li>
-          <li className="flex py-2">
-            <img className="mr-1 h-7" src="chessinsights_icon.png" />
-            <p className="text-lg">Chess Insights</p>
-          </li>
-          <li className="flex py-2">
-            <img className="mr-1 h-7" src="wildoasis_icon.png" />
-            <p className="text-lg">Wild Oasis</p>
-          </li>
-        </ul>
-      </div>
-      <div className="projects-info-grid">
-        <div>
-          <h1 className="pb-1 text-2xl font-bold">Other</h1>
+      {projectsData.map((section) => (
+        <MenuSection
+          title={section.name}
+          link={section.link}
+          close={close}
+          key={section.name}
+        >
           <ul>
-            <li className="flex py-2">
-              <img className="mr-1 h-7" src="tripledot_icon.png" />
-              <p className="text-lg">Click here to see more!</p>
-            </li>
+            {section.elements.map((element) => (
+              <MenuListItem
+                link={`${section.link}${
+                  element.hashLink ? `#${element.hashLink}` : ""
+                }`}
+                close={close}
+                key={element.name}
+              >
+                {element.logos.map((logo) => (
+                  <img
+                    className="mr-2 h-7"
+                    src={logo}
+                    alt={logo.slice(0, -4)}
+                    key={logo}
+                  />
+                ))}
+                <p className="text-lg">{element.name}</p>
+              </MenuListItem>
+            ))}
           </ul>
-        </div>
-      </div>
+        </MenuSection>
+      ))}
     </div>
   );
 }

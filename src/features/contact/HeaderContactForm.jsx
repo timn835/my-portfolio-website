@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import { useDarkMode } from "../../context/DarkModeContext";
 import { useState } from "react";
+import MenuSection from "../../ui/MenuSection";
 
 function HeaderContactForm({ close }) {
   const { isDarkMode } = useDarkMode();
@@ -28,12 +28,10 @@ function HeaderContactForm({ close }) {
     setName("");
     setEmail("");
     setMessage("");
+    close();
   };
   return (
-    <div>
-      <Link to="contact">
-        <h1 className="pb-1 text-2xl font-bold">Contact</h1>
-      </Link>
+    <MenuSection title="Contact" link="contact" close={close}>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name" aria-autocomplete="none">
           Your name
@@ -69,7 +67,7 @@ function HeaderContactForm({ close }) {
           <div>Send</div>
         </button>
       </form>
-    </div>
+    </MenuSection>
   );
 }
 
