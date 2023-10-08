@@ -13,9 +13,7 @@
   }
 
   body {
-    transition:
-      color 0.3s,
-      background-color 0.3s;
+    transition: background-color 0.3s;
     font-size: 1.2rem;
   }
 
@@ -25,6 +23,14 @@
 
   .dark-mode {
     @apply bg-sky-800 text-zinc-200;
+  }
+
+  .dropdown-trigger {
+    transition: color 0.3s ease-in-out;
+  }
+
+  .dropdown-trigger:hover {
+    transition: color 0.3s ease-in-out;
   }
 
   .dropdown-menu.active {
