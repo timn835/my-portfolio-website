@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import { useDarkMode } from "../context/DarkModeContext";
+import { NavHashLink } from "react-router-hash-link";
 
 function MenuSection({ title, link, close, children }) {
   const { isDarkMode } = useDarkMode();
@@ -8,11 +8,11 @@ function MenuSection({ title, link, close, children }) {
     "rounded-lg p-1 text-2xl font-bold hover:bg-zinc-300";
   return (
     <section>
-      <Link to={link} onClick={close}>
+      <NavHashLink smooth to={`${link}#start`} onClick={close}>
         <h1 className={isDarkMode ? darkLinkClasses : lightLinkClasses}>
           {title}
         </h1>
-      </Link>
+      </NavHashLink>
       {children}
     </section>
   );

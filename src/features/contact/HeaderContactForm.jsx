@@ -17,9 +17,9 @@ function HeaderContactForm({ close }) {
   const lightModeTextAreaClasses =
     "mb-3 rounded-lg bg-zinc-300 p-2 focus:outline-none";
   const darkModeButtonClasses =
-    "mb-2 rounded-lg bg-sky-700 px-3 py-2 hover:bg-sky-800";
+    "flex mb-2 rounded-lg bg-sky-700 px-3 pb-1 pt-2 hover:bg-sky-800";
   const lightModeButtonClasses =
-    "mb-2 rounded-lg bg-zinc-300 px-3 py-2 hover:bg-zinc-200";
+    "mb-2 rounded-lg bg-zinc-300 px-3 pb-1 pt-2 hover:bg-zinc-200";
 
   const handleSubmit = (e) => {
     e.preventDefault();

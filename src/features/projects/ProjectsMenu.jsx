@@ -24,7 +24,7 @@ function ProjectsMenu({ close }) {
                 {element.logos.map((logo) => (
                   <img
                     className="mr-2 h-7"
-                    src={logo}
+                    src={`/${logo}`}
                     alt={logo.slice(0, -4)}
                     key={logo}
                   />

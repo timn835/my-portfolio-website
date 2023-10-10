@@ -8,10 +8,10 @@ function Dropdown({ id, openId, setOpenId, children }) {
     "dropdown-menu absolute rounded-lg p-2 bg-sky-950";
   const lightChildrenClasses =
     "dropdown-menu absolute rounded-lg p-2 bg-zinc-50";
-  const darkTriggerClasses = `dropdown-trigger hover:text-zinc-400${
+  const darkTriggerClasses = `color-transition hover:text-zinc-400${
     openId === id ? " text-zinc-400" : ""
   }`;
-  const lightTriggerClasses = `dropdown-trigger hover:text-sky-600${
+  const lightTriggerClasses = `color-transition hover:text-sky-600${
     openId === id ? " text-sky-600" : ""
   }`;
   const childrenClasses = isDarkMode
