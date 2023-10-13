@@ -14,13 +14,13 @@ const servicesData = [
         logos: ["html_icon.png", "css_icon.png", "js_icon.png"],
       },
       {
-        name: "Bootstrap",
-        hashLink: "bootstrap",
-        logos: ["bootstrap_icon.png"],
+        name: "Bootstrap, Material UI",
+        hashLink: "front-frameworks",
+        logos: ["bootstrap_icon.png", "materialui_icon.png"],
       },
       {
         name: "Tailwind, styled-components",
-        hashLink: "cssframeworks",
+        hashLink: "styles-of-css",
         logos: ["tailwind_icon.png", "styledcomponents_icon.png"],
       },
     ],

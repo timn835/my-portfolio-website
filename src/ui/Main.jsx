@@ -1,6 +1,12 @@
+import { useScrollTop } from "../hooks/useScrollTop";
+
 function Main({ children }) {
+  const ref = useScrollTop();
   return (
-    <main className="overflow-y-auto px-3 py-4 sm:px-5 md:px-8 lg:px-10">
+    <main
+      ref={ref}
+      className="overflow-y-auto px-3 py-4 sm:px-5 md:px-8 lg:px-10"
+    >
       {children}
     </main>
   );
