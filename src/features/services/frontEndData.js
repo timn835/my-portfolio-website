@@ -28,7 +28,6 @@ const frontEndSections = [
         ],
         imageSrc: "/images/question_image.png",
         imageLeft: true,
-        imageSize: 300,
       },
       {
         title: `The solution`,
@@ -80,7 +79,6 @@ const frontEndSections = [
           },
         ],
         imageSrc: "/images/solution_image.png",
-        imageSize: 250,
       },
     ],
   },
@@ -122,7 +120,6 @@ const frontEndSections = [
         ],
         imageSrc: "/images/react_image.png",
         imageLeft: true,
-        imageSize: 400,
       },
       {
         title: `What makes a super-react dev`,
@@ -171,7 +168,6 @@ const frontEndSections = [
           },
         ],
         imageSrc: "/images/superman_image.png",
-        imageSize: 300,
       },
     ],
   },
@@ -217,7 +213,6 @@ const frontEndSections = [
         ],
         imageSrc: "/images/vanilla_image.png",
         imageLeft: true,
-        imageSize: 300,
       },
       {
         title: `React integration`,
@@ -241,7 +236,6 @@ const frontEndSections = [
           },
         ],
         imageSrc: "/images/limitless_image.png",
-        imageSize: 200,
       },
     ],
   },
@@ -285,7 +279,41 @@ const frontEndSections = [
         ],
         imageSrc: "/images/time_image.png",
         imageLeft: true,
-        imageSize: 200,
+      },
+      {
+        title: `Other benefits of front end development frameworks`,
+        type: "list",
+        content: [
+          {
+            parent: `Responsive design`,
+            children: [
+              `Easily create layouts`,
+              `Automatically adapt to different screen sizes`,
+              `Ensure a consistent user experience across various devices`,
+            ],
+            hash: "responsive-design",
+          },
+          {
+            parent: `Customizable themes`,
+            children: [
+              `Many existing themes and templates out of the box`,
+              `Developers can quickly prototype and build interfaces`,
+              `Less time spent on design`,
+            ],
+            hash: "customizable-themes",
+          },
+          {
+            parent: `Large existing community`,
+            children: [
+              `Documentation available for common issues`,
+              `Access to a wide range of 3rd party plugins and extensions`,
+              `Strong community support for known problems`,
+            ],
+            hash: "community-support",
+          },
+        ],
+        imageSrc: "/images/running_image.png",
+        imageLeft: false,
       },
     ],
   },
@@ -314,7 +342,6 @@ const frontEndSections = [
           },
         ],
         imageSrc: "/images/question_image.png",
-        imageSize: 300,
       },
     ],
   },

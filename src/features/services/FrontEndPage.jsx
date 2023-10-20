@@ -56,7 +56,7 @@ function FrontEndPage() {
                   <img
                     src={subsection.imageSrc}
                     alt={subsection.title}
-                    className={`w-[${subsection.imageSize}px]`}
+                    className="w-[300px]"
                   />
                 </div>
               </>
