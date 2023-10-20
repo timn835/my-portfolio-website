@@ -63,7 +63,7 @@ const frontEndSections = [
               },
               {
                 type: "bold",
-                text: `re-usability `,
+                text: `reusability `,
               },
               {
                 text: `(is my code going to be used by other team members?), `,
@@ -125,23 +125,49 @@ const frontEndSections = [
         imageSize: 400,
       },
       {
-        title: `What makes us a super-react dev`,
+        title: `What makes a super-react dev`,
         type: "list",
         content: [
           {
-            parent: `First reason`,
-            children: [`bla`, `blabla`, `blablablaa`],
-            hash: "first-super-reason",
+            parent: `Having a React mindset`,
+            children: [
+              `Think in terms of overall app data flow`,
+              `Build complex UI into smaller re-usable components`,
+              `Distinguish between local and global state`,
+              `Know where to place pieces of state (component, url, context)`,
+            ],
+            hash: "react-mindset",
           },
           {
-            parent: `Second reason`,
-            children: [`bla`, `blabla`, `blablabla`],
-            hash: "second-super-reason",
+            parent: `Knowing advanced React patterns`,
+            children: [
+              `Component composition & custom hooks: improve reusability and reduce prop drilling`,
+              `Context API + useReducer hook: fix prop-drilling, decouple state updating logic from components`,
+              `Compound components: create more complex, reusable and flexible components (e.g. modals, menus)`,
+            ],
+            hash: "advanced-react-patterns",
           },
           {
-            parent: `Third reason`,
-            children: [`bla`, `blabla`, `blablabla`],
-            hash: "third-super-reason",
+            parent: `Using performance optimization techniques`,
+            children: [
+              `Prevent wasted renders: Profiler Developer Tool, memo, useMemo, useCallback`,
+              `Improve speed and responsiveness: useMemo, useCallback & useTransition`,
+              `Reduce bundle size: less 3rd party packages, code splitting & lazy loading`,
+            ],
+            hash: "performance-optimization",
+          },
+          {
+            parent: `Knowing React under the hood`,
+            children: [
+              `Differentiate between component, component instance and React element`,
+              `Know what rendering in React means (it is not writing to the DOM!)`,
+              `Component reconciliation: diffing process, virtual DOM & the fiber tree`,
+              `Understand why key prop improves diffing algorithm`,
+              `Be aware of the commit phase (ReactDOM renderer)`,
+              `Batching of state updates in event handler (asynchronous state variables)`,
+              `Synthetic events + event bubbling`,
+            ],
+            hash: "inner-workings-of-react",
           },
         ],
         imageSrc: "/images/superman_image.png",
@@ -160,7 +186,7 @@ const frontEndSections = [
             textContent: [
               { type: "bold", text: `Absolutely. ` },
               {
-                text: `In my experience in the industry, every top-tier front end developer is fairly skilled with HTML, CSS and JS. In order to understand more complex libraries and frameworks (React, NextJS, Tailwind), it is imperative to have a mastery of the things these frameworks are built upon.`,
+                text: `In my experience in the industry, every top-tier front end developer is skilled with HTML, CSS and JS. In order to understand more complex libraries and frameworks (React, NextJS, Tailwind), it is imperative to have a mastery of the things these frameworks are built upon.`,
               },
             ],
             hash: "vanilla-worth-it",
@@ -168,7 +194,22 @@ const frontEndSections = [
           {
             textContent: [
               {
-                text: `Furthermore, a vanilla tech stack is often the right choice for simpler short-term endeavors. Having fewer dependencies will make things lighter, easier, faster. By knowing how to code with vanilla, our clients have a much wider range of possibilities for their projects.`,
+                text: `If make a comparison with React, the main difference is the `,
+              },
+              {
+                type: "bold",
+                text: `separation of concerns`,
+              },
+              {
+                text: `. Vanilla projects are split to create 3 "horizontal" layers, i.e. HTML (structure), CSS (looks) and JS (functionality). React projects are split into "vertical" layers (components), where each layer has a piece of structure, look and functionality (JSX=HTML+CSS+JS).`,
+              },
+            ],
+            hash: "separation-of-concerns",
+          },
+          {
+            textContent: [
+              {
+                text: `Therefore, a vanilla tech stack is often the right choice for simpler short-term endeavors. Having fewer dependencies will make things lighter, easier, faster. By knowing how to code with vanilla, clients have a much wider range of possibilities for their projects.`,
               },
             ],
             hash: "right-for-simpler",
