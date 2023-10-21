@@ -27,7 +27,6 @@ const frontEndSections = [
           },
         ],
         imageSrc: "/images/question_image.png",
-        imageLeft: true,
       },
       {
         title: `The solution`,
@@ -119,22 +118,11 @@ const frontEndSections = [
           },
         ],
         imageSrc: "/images/react_image.png",
-        imageLeft: true,
       },
       {
         title: `What makes a super-react dev`,
         type: "list",
         content: [
-          {
-            parent: `Having a React mindset`,
-            children: [
-              `Think in terms of overall app data flow`,
-              `Build complex UI into smaller re-usable components`,
-              `Distinguish between local and global state`,
-              `Know where to place pieces of state (component, url, context)`,
-            ],
-            hash: "react-mindset",
-          },
           {
             parent: `Knowing advanced React patterns`,
             children: [
@@ -212,7 +200,6 @@ const frontEndSections = [
           },
         ],
         imageSrc: "/images/vanilla_image.png",
-        imageLeft: true,
       },
       {
         title: `React integration`,
@@ -278,7 +265,6 @@ const frontEndSections = [
           },
         ],
         imageSrc: "/images/time_image.png",
-        imageLeft: true,
       },
       {
         title: `Other benefits of front end development frameworks`,
@@ -313,7 +299,6 @@ const frontEndSections = [
           },
         ],
         imageSrc: "/images/running_image.png",
-        imageLeft: false,
       },
     ],
   },
@@ -321,27 +306,93 @@ const frontEndSections = [
     hash: "styles-of-css",
     subsections: [
       {
-        title: `Different ways of writing CSS`,
+        title: `An unopinionated approach`,
         type: "paragraphs",
         content: [
           {
             textContent: [
               {
-                text: `Tailwind is great blablablabla`,
+                text: `We believe that developers should be free to choose how to develop their applications. Therefore, the best libraries and frameworks, such as React, offer a wide variety of approaches to styling. These approaches include, but are not limited to : `,
               },
-            ],
-            hash: "tailwind-is-great",
-          },
-          {
-            textContent: [
               {
-                text: `Styled-components are great blablablabla`,
+                type: "bold",
+                text: `inline styling, external CSS, SASS files, CSS modules, styled-components, tailwind`,
+              },
+              {
+                text: `. The following is a short list describing these approaches, when to use them and what are the pros and cons of each.`,
               },
             ],
-            hash: "styled-components-are-great",
+            hash: "unopinionated-approach",
           },
         ],
-        imageSrc: "/images/question_image.png",
+        imageSrc: "/images/unopinionated_image.png",
+      },
+      {
+        title: `Choosing the right tool for the job`,
+        type: "list",
+        content: [
+          {
+            parent: `Inline styling`,
+            children: [
+              `Applying styles directly to JSX elements`,
+              `Suitable for small-scale applications or for applying dynamic styles based on state or props`,
+              `Pros: simplifies integration with React components, allows dynamic styling based on component state or props`,
+              `Cons: can lead to cluttered code, limited reusability, and difficulty in maintaining complex styles`,
+            ],
+            hash: "inline-styling",
+          },
+          {
+            parent: `External CSS`,
+            children: [
+              `Creating separate CSS files linked to JSX components`,
+              `Ideal for a traditional approach and when requiring a clear separation of concerns between HTML, CSS, and JS`,
+              `Pros: Promotes a modular structure, eases management and reuse of styles across components, leverages browser caching`,
+              `Cons: Potential for global style conflicts and specificity issues if not managed properly`,
+            ],
+            hash: "external-css",
+          },
+          {
+            parent: `SASS files`,
+            children: [
+              `Using SASS to extend CSS with features like variables, nesting, and mixins`,
+              `Suitable for creating cleaner and more structured styles, reducing redundancy, and improving code readability`,
+              `Pros: Enables the creation of complex styles with less code, enhances maintainability and organization of stylesheets`,
+              `Cons: Requires a learning curve for developers not familiar with SASS, may add complexity to the development environment`,
+            ],
+            hash: "sass-files",
+          },
+          {
+            parent: `CSS modules`,
+            children: [
+              `Allowing local scoping of CSS by creating unique class names for each component`,
+              `Ideal for maintaining modular, reusable, and maintainable styles scoped to specific components`,
+              `Pros: Promotes a component-based approach to styling, prevents style conflicts, enables easy management and refactoring`,
+              `Cons: Might necessitate additional build configurations, may slightly increase development complexity for beginners`,
+            ],
+            hash: "css-modules",
+          },
+          {
+            parent: `Styled components`,
+            children: [
+              `Writing CSS directly within JavaScript code using the styled-components library`,
+              `Suitable for creating dynamic and themeable UI components, and for enabling easy management and maintenance of complex UI elements`,
+              `Pros: Simplifies styling integration with components, supports props and dynamic styles, enhances component encapsulation`,
+              `Cons: Might lead to large JavaScript bundles, requires a mental shift for developers accustomed to traditional CSS`,
+            ],
+            hash: "styled-components",
+          },
+          {
+            parent: `Tailwind`,
+            children: [
+              `Using a utility-first CSS framework for applying styles directly through pre-defined utility classes`,
+              `Ideal for rapidly prototyping and efficiently styling complex layouts and designs`,
+              `Pros: Simplifies the creation of complex designs, offers a comprehensive set of utility classes for common CSS properties, promotes consistent styling`,
+              `Cons: May result in larger file sizes due to the use of utility classes, may lead to potential styling inconsistencies without careful management`,
+            ],
+            hash: "tailwind",
+          },
+        ],
+        imageSrc: "/images/toolset_image.png",
       },
     ],
   },
